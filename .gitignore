@@ -1,0 +1,17 @@
+.settings
+*.pyc
+.project
+.pydevproject
+# files for git to ignore
+.DS_STORE
+
+*.sublime-project
+*.sublime-workspace
+*.idea
+*__pycache__
+
+# Setuptools distribution folder.
+/dist/
+
+# Python egg metadata, regenerated from source files by setuptools.
+/*.egg-info
