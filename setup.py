@@ -1,16 +1,23 @@
-from setuptools import setup, find_packages
+from glob import glob
+
+from setuptools import find_packages
+from setuptools import setup
 
 setup(
-    name = "gpsdpy3",
-    version = "3.17.0",
-    packages=find_packages(),
+    name = "gps",
+    version = "3.17.0", # tracks the GPSD-project verssion
     author = "Daniel Williams",
     author_email = "equipoise@gmail.com",
-    description = ("gpsd client library (python3 port)"),
+    description = "gpsd client library (python3 port)",
     license = "BSD License (3-Clause)",
     keywords = 'gps ais gpsd python3',
     url = "https://github.com/teyrana/gpsd-python3",
+
     install_requires=[],
+    packages=find_packages('src'),
+    include_package_data=True,
+    package_dir={'':'src'},
+    py_modules=[splitext(basename(path))[0] for path in glob('src/*.py')],
 
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=['Development Status :: 4 - Beta',
