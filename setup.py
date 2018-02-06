@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = "gpsdpy3",
-    version = "0.3.2",
+    version = "3.17.0",
     packages=find_packages(),
     author = "Daniel Williams",
     author_email = "equipoise@gmail.com",
