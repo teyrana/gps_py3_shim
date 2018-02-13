@@ -4,8 +4,8 @@ from setuptools import find_packages
 from setuptools import setup
 
 setup(
-    name = "gps",
-    version = "3.17.0", # tracks the GPSD-project verssion
+    name = "gps_py3_shim",
+    version = "3.17.1", # tracks the GPSD-project verssion
     author = "Daniel Williams",
     author_email = "equipoise@gmail.com",
     description = "gpsd client library (python3 port)",
@@ -30,9 +30,10 @@ setup(
                  'Operating System :: OS Independent',
                  'Operating System :: POSIX',
                  'Operating System :: POSIX :: Linux',
-                 # should work on any python3 version, but has only been tested on 3.5
+                 # should work on any python2 OR python3 version, but has only been tested on 3.5
                  'Programming Language :: Python :: 3',
                  'Programming Language :: Python :: 3.5',
+                 'Programming Language :: Python :: 3.6',
                  'Topic :: Scientific/Engineering',
                  'Topic :: Scientific/Engineering :: GIS'
     ],
