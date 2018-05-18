@@ -1,22 +1,24 @@
 from glob import glob
+from os.path import basename, splitext
 
 from setuptools import find_packages
 from setuptools import setup
 
 setup(
-    name = "gps_py3_shim",
-    version = "3.17.1", # tracks the GPSD-project verssion
-    author = "Daniel Williams",
-    author_email = "equipoise@gmail.com",
-    description = "gpsd client library (python3 port)",
-    license = "BSD License (3-Clause)",
-    keywords = 'gps ais gpsd python3',
-    url = "https://github.com/teyrana/gpsd-python3",
+    name="gps_py3_shim",
+    # major.minor tracks the GPSD-project verssion;  revision varies here
+    version="3.17.4",
+    author="Daniel Williams",
+    author_email="equipoise@gmail.com",
+    description="gpsd client library (python3 port)",
+    license="BSD License (3-Clause)",
+    keywords='gps ais gpsd python3',
+    url="https://github.com/teyrana/gps_py3_shim",
 
     install_requires=[],
     packages=find_packages('src'),
     include_package_data=True,
-    package_dir={'':'src'},
+    package_dir={'': 'src'},
     py_modules=[splitext(basename(path))[0] for path in glob('src/*.py')],
 
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -36,5 +38,5 @@ setup(
                  'Programming Language :: Python :: 3.6',
                  'Topic :: Scientific/Engineering',
                  'Topic :: Scientific/Engineering :: GIS'
-    ],
+                 ],
 )
