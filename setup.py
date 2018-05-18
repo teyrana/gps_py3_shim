@@ -7,10 +7,11 @@ from setuptools import setup
 setup(
     name="gps_py3_shim",
     # major.minor tracks the GPSD-project verssion;  revision varies here
-    version="3.17.4",
+    version="3.17.5",
     author="Daniel Williams",
     author_email="equipoise@gmail.com",
     description="gpsd client library (python3 port)",
+    long_description=open('README.md').read(),
     license="BSD License (3-Clause)",
     keywords='gps ais gpsd python3',
     url="https://github.com/teyrana/gps_py3_shim",
